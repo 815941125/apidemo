@@ -1,5 +1,6 @@
 package com.lf.demo.controller;
 
+import com.lf.demo.annotation.ApiIdempotent;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
     @GetMapping("/index")
+    @ApiIdempotent
     public String index() {
         return "hello";
     }

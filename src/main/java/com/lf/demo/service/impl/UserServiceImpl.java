@@ -3,8 +3,6 @@ package com.lf.demo.service.impl;
 import com.lf.demo.mapper.UserMapper;
 import com.lf.demo.pojo.User;
 import com.lf.demo.service.UserService;
-import com.lf.demo.util.JedisUtil;
-import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,12 +21,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
-
-    @Autowired
-    private JedisUtil jedisUtil;
-
-    @Autowired
-    private RedissonClient redissonClient;
 
     @Override
     public List<User> getAll() {
