@@ -1,0 +1,23 @@
+server:
+  port: 9000
+
+
+# redis的配置，具体看自己的配置IP和端口
+spring:
+  redis:
+    host: 127.81.225.72
+    port: 6379
+    password: PL298CS2
+    pool:
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
+    timeout: 0
+  # mysql
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&autoR&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+
